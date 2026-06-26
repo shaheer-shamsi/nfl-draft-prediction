@@ -7,40 +7,6 @@ Predicting NFL Draft selections using machine learning, feature engineering, and
 
 ---
 
-
-## Repository Structure
-
-```
-nfl-draft-prediction/
-
-├── notebook/
-│   └── NFL_Draft_Prediction.ipynb
-│
-├── experiments/
-│   ├── feature_engineering.ipynb
-│   ├── feature_selection.ipynb
-│   ├── hyperparameter_tuning.ipynb
-│   └── ensembling.ipynb
-│
-├── data/
-│   ├── train.csv
-│   ├── test.csv
-│   └── sample_submission.csv
-│
-├── figures/
-│   ├── input.jpg
-│   ├── distribution.png
-│   └── correlation.png
-│
-├── output/
-│   └── submission.csv
-│
-├── requirements.txt
-└── README.md
-```
-
----
-
 ## Overview
 
 This project explores the application of supervised machine learning techniques to predict NFL draft selections from player combine statistics, physical attributes, collegiate background, and engineered performance metrics.
@@ -58,6 +24,57 @@ The project follows a complete machine learning workflow including:
 The final solution combines multiple gradient boosting and tree-based models through performance-weighted averaging using 5-Fold Cross Validation.
 
 ---
+
+
+
+## Models
+
+The following models were trained and evaluated using 5-Fold Cross Validation.
+
+| Model         | Validation AUC |
+| ------------- | -------------: |
+| CatBoost      |     **0.8517** |
+| Random Forest |         0.8464 |
+| XGBoost       |         0.8412 |
+| LightGBM      |         0.8391 |
+
+The final submission uses **performance-weighted ensemble averaging**, where each model contributes proportionally to its validation performance.
+
+Overall Validation AUC:
+
+**0.84 – 0.85**
+
+---
+
+## Techniques Used
+
+* Exploratory Data Analysis
+* Missing Value Imputation
+* Feature Engineering
+* Feature Selection
+* Target Encoding
+* Hyperparameter Optimization
+* 5-Fold Cross Validation
+* Performance-Weighted Ensembling
+* Gradient Boosting
+* Tree-Based Learning
+
+---
+
+## Dataset
+
+The dataset contains NFL prospect information including:
+
+* Physical measurements
+* Combine performance
+* College information
+* Position
+* Historical draft outcomes
+
+Data files are located in the `data/` directory.
+
+---
+
 ## Project Workflow
 
 ```
@@ -90,40 +107,153 @@ Prediction
 
 ---
 
+### Dataset
 
+<p align="center">
+    <img src="./figures/input.jpg" width="900">
+</p>
 
-## Models
+---
 
-The following models were trained and evaluated using 5-Fold Cross Validation.
+### Feature Distribution
 
-| Model         | Validation AUC |
-| ------------- | -------------: |
-| CatBoost      |     **0.8517** |
-| Random Forest |         0.8464 |
-| XGBoost       |         0.8412 |
-| LightGBM      |         0.8391 |
+<p align="center">
+    <img src="./figures/distribution.png" width="850">
+</p>
 
-The final submission uses **performance-weighted ensemble averaging**, where each model contributes proportionally to its validation performance.
+---
 
-Overall Validation AUC:
+### Feature Correlation Matrix
 
-**0.84 – 0.85**
+<p align="center">
+    <img src="./figures/correlation.png" width="850">
+</p>
+
+## Exploratory Data Analysis
+
+### Dataset Sample
+
+<p align="center">
+<img src="figures/input.jpg" width="900">
+</p>
+
+---
+
+### Feature Distribution
+
+<p align="center">
+<img src="figures/distribution.png" width="800">
+</p>
+
+---
+
+### Feature Correlation
+
+<p align="center">
+<img src="figures/correlation.png" width="800">
+</p>
+
+---
+
+## Feature Engineering
+
+Several domain-inspired features were created to improve predictive performance.
+
+Engineered features include:
+
+* Explosiveness Index
+* Body Mass Index (BMI)
+* Power-to-Weight Ratio
+* Speed Composite Score
+* Agility Composite Score
+* School Frequency Encoding
+* School Target Encoding
+* Missing Value Indicators
+
+These features were combined with preprocessing pipelines and model-specific feature selection techniques.
 
 ---
 
 
-## Techniques Used
+## Repo Structure
 
-* Exploratory Data Analysis
-* Missing Value Imputation
-* Feature Engineering
-* Feature Selection
-* Target Encoding
-* Hyperparameter Optimization
-* 5-Fold Cross Validation
-* Performance-Weighted Ensembling
-* Gradient Boosting
-* Tree-Based Learning
+```
+nfl-draft-prediction/
+
+├── notebook/
+│   └── NFL_Draft_Prediction.ipynb
+│
+├── experiments/
+│   ├── feature_engineering.ipynb
+│   ├── feature_selection.ipynb
+│   ├── hyperparameter_tuning.ipynb
+│   └── ensembling.ipynb
+│
+├── data/
+│   ├── train.csv
+│   ├── test.csv
+│   └── sample_submission.csv
+│
+├── figures/
+│   ├── input.jpg
+│   ├── distribution.png
+│   └── correlation.png
+│
+├── output/
+│   └── submission.csv
+│
+├── requirements.txt
+└── README.md
+```
+
+---
+
+## Tech Stack
+
+**Languages**
+
+* Python
+
+**Libraries**
+
+* Pandas
+* NumPy
+* Scikit-learn
+* XGBoost
+* LightGBM
+* CatBoost
+* Matplotlib
+
+**DevEnv**
+
+* Jupyter Notebook
+* Google Colab
+
+---
+
+## Running the Project
+
+Clone the repository.
+
+```bash
+git clone https://github.com/shaheer-shamsi/nfl-draft-prediction.git
+
+cd nfl-draft-prediction
+```
+
+Install dependencies.
+
+```bash
+pip install -r requirements.txt
+```
+
+Launch Jupyter Notebook.
+
+```bash
+jupyter notebook
+```
+
+or open the notebook directly in Google Colab using the badge at the top of this README.
 
 ---
 
@@ -136,4 +266,3 @@ Overall Validation AUC:
 * Google Gemini was used as a search and formatting assistant during the preparation of this project documentation.
 
 ---
-
