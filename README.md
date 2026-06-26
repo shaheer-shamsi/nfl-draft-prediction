@@ -7,6 +7,40 @@ Predicting NFL Draft selections using machine learning, feature engineering, and
 
 ---
 
+
+## Repository Structure
+
+```
+nfl-draft-prediction/
+
+├── notebook/
+│   └── NFL_Draft_Prediction.ipynb
+│
+├── experiments/
+│   ├── feature_engineering.ipynb
+│   ├── feature_selection.ipynb
+│   ├── hyperparameter_tuning.ipynb
+│   └── ensembling.ipynb
+│
+├── data/
+│   ├── train.csv
+│   ├── test.csv
+│   └── sample_submission.csv
+│
+├── figures/
+│   ├── input.jpg
+│   ├── distribution.png
+│   └── correlation.png
+│
+├── output/
+│   └── submission.csv
+│
+├── requirements.txt
+└── README.md
+```
+
+---
+
 ## Overview
 
 This project explores the application of supervised machine learning techniques to predict NFL draft selections from player combine statistics, physical attributes, collegiate background, and engineered performance metrics.
