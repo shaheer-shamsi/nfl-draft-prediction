@@ -24,6 +24,37 @@ The project follows a complete machine learning workflow including:
 The final solution combines multiple gradient boosting and tree-based models through performance-weighted averaging using 5-Fold Cross Validation.
 
 ---
+## Project Workflow
+
+```
+Raw Dataset
+      │
+      ▼
+Data Cleaning
+      │
+      ▼
+Exploratory Data Analysis
+      │
+      ▼
+Feature Engineering
+      │
+      ▼
+Feature Selection
+      │
+      ▼
+Model Training
+      │
+      ▼
+Hyperparameter Tuning
+      │
+      ▼
+Ensemble Learning
+      │
+      ▼
+Prediction
+```
+
+---
 
 
 
