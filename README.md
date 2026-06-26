@@ -129,33 +129,7 @@ Prediction
     <img src="./figures/correlation.png" width="850">
 </p>
 
-## Exploratory Data Analysis
-
-### Dataset Sample
-
-<p align="center">
-<img src="figures/input.jpg" width="900">
-</p>
-
----
-
-### Feature Distribution
-
-<p align="center">
-<img src="figures/distribution.png" width="800">
-</p>
-
----
-
-### Feature Correlation
-
-<p align="center">
-<img src="figures/correlation.png" width="800">
-</p>
-
----
-
-## Feature Engineering
+## Exploratory Data Analysis and Feature Engineering
 
 Several domain-inspired features were created to improve predictive performance.
 
