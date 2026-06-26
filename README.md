@@ -7,6 +7,9 @@ Predicting NFL Draft selections using machine learning, feature engineering, and
 
 ---
 
+## Overview
+
+This project explores the application of supervised machine learning techniques to predict NFL draft selections from player combine statistics, physical attributes, collegiate background, and engineered performance metrics.
 
 The project follows a complete machine learning workflow including:
 
@@ -17,3 +20,7 @@ The project follows a complete machine learning workflow including:
 * Hyperparameter Optimization
 * Ensemble Learning
 * Performance Evaluation
+
+The final solution combines multiple gradient boosting and tree-based models through performance-weighted averaging using 5-Fold Cross Validation.
+
+---
