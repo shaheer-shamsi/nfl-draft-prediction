@@ -27,6 +27,25 @@ The final solution combines multiple gradient boosting and tree-based models thr
 
 
 
+## Models
+
+The following models were trained and evaluated using 5-Fold Cross Validation.
+
+| Model         | Validation AUC |
+| ------------- | -------------: |
+| CatBoost      |     **0.8517** |
+| Random Forest |         0.8464 |
+| XGBoost       |         0.8412 |
+| LightGBM      |         0.8391 |
+
+The final submission uses **performance-weighted ensemble averaging**, where each model contributes proportionally to its validation performance.
+
+Overall Validation AUC:
+
+**0.84 – 0.85**
+
+---
+
 
 ## Techniques Used
 
