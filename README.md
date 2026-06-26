@@ -126,3 +126,14 @@ Overall Validation AUC:
 * Tree-Based Learning
 
 ---
+
+## References
+
+* Wes McKinney. *Python for Data Analysis: Data Wrangling with pandas, NumPy, and Jupyter (3rd Edition).* O'Reilly Media, 2022.
+
+* Ethem Alpaydin. *Introduction to Machine Learning (4th Edition).* MIT Press, 2020.
+
+* Google Gemini was used as a search and formatting assistant during the preparation of this project documentation.
+
+---
+
